@@ -12,15 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OnetOnlineV2"
         tools:targetApi="31">
+
+        <!-- Loading Activity là màn hình khởi chạy -->
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".LoadingActivity"
+            android:exported="true"> <!-- Đảm bảo exported là true -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+    </application>
 </manifest>
