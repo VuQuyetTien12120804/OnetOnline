@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <!-- Phần bên trái -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_weight="1"
+            android:background="#00BCD4"
+            android:orientation="horizontal">
+            <!-- Tab Selector -->
+
+            <!-- Nội dung khu vực trên -->
+            <TabHost
+                android:id="@+id/mytab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/tab1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <include layout="@layout/layout1"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tab2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <include layout="@layout/layout1"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tab3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <include layout="@layout/layout1"/>
+
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </TabHost>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#FF5722"
+            android:orientation="vertical">
+            <!-- Nội dung khu vực dưới -->
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Phần bên phải -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="#FFC107">
+
+        <!-- Các nút và bảng -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/ButonClassic"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="3"
+                    android:text="Classic"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/Button1"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/ButtonRandom"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="3"
+                    android:text="Random"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/Button2"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/ButtonContinue"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="3"
+                    android:text="Continue - 1"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/Button3"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/ButtonOnline"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="3"
+                    android:text="Online"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/Button4"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1" />
+            </TableRow>
+        </TableLayout>
+
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="Privacy policy"
+            android:textSize="13sp"
+            android:layout_gravity="center"/>
+
+        <!-- Các nút A, B, C -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/ButtonMusic"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:text="A" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:text="B" />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:text="C" />
+        </LinearLayout>
+
+        <!-- Style và các nút D, E -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Style:"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:text="D" />
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:text="E" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
